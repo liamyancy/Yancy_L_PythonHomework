@@ -1,4 +1,4 @@
-# Rock Paper Scissors is Python!
+# Rock Paper Scissors in Python!
 
 Pick your weapon and play against the computer - you'll only get a virtual sting if you lose!
 
