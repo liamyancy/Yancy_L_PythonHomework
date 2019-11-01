@@ -1,7 +1,7 @@
 # import the random package so that we can generate a random choice
 from random import randint
 
-#sut up some variables for player and AI lives
+#set up some variables for player and AI lives
 player_lives = 5
 computer_lives = 5
 
