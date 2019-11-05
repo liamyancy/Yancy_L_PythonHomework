@@ -1,5 +1,7 @@
 # import the random package so that we can generate a random choice
 from random import randint
+from gamefunctions import winlose
+
 
 #set up some variables for player and AI lives
 player_lives = 5
@@ -14,6 +16,8 @@ computer = choices[randint(0, 2)]
 
 # set up the game loop so that we don't have to restart all the time
 player = False
+
+# define a python funtion that takes an arguement
 
 while player == False:
 	#set player to True
@@ -65,36 +69,38 @@ while player == False:
 
 	#handle all lives lost for player or AI
 	if player_lives is 0:
-		print("Out of lives! You suck at this game. Would you like to play again?")
-		choice = input("Y / N")
-		print (choice)
+		winlose.winorlose("lost")
+		# print("Out of lives! You suck at this game. Would you like to play again?")
+		# choice = input("Y / N")
+		# print (choice)
 
-		if (choice is "N") or (choice is "n"):
-			print("You chose to quit.")
-			exit()
+		# if (choice is "N") or (choice is "n"):
+		# 	print("You chose to quit.")
+		# 	exit()
 
-		elif (choice is "Y") or (choice is "y"):
-			#reset the game so we start over again
-			player_lives = 5
-			computer_lives = 5
-			player = False
-			computer = choices[randint(0,2)]
+		# elif (choice is "Y") or (choice is "y"):
+		# 	#reset the game so we start over again
+		# 	player_lives = 5
+		# 	computer_lives = 5
+		# 	player = False
+		# 	computer = choices[randint(0,2)]
 
 	elif computer_lives is 0:
-		print("Computer is out of lives! You rock at this game. Would you like to play again?")
-		choice = input("Y / N")
-		print (choice)
+		winlose.winorlose("won")
+	# print("Computer is out of lives! You rock at this game. Would you like to play again?")
+	# choice = input("Y / N")
+	# print (choice)
 
-		if (choice is "N") or (choice is "n"):
-			print("You chose to quit.")
-			exit()
+	# if (choice is "N") or (choice is "n"):
+	# 	print("You chose to quit.")
+	# 	exit()
 
-		elif (choice is "Y") or (choice is "y"):
-			#reset the game so we start over again
-			player_lives = 5
-			computer_lives = 5
-			player = False
-			computer = choices[randint(0,2)]
+	# elif (choice is "Y") or (choice is "y"):
+	# 	#reset the game so we start over again
+	# 	player_lives = 5
+	# 	computer_lives = 5
+	# 	player = False
+	# 	computer = choices[randint(0,2)]
 
 	else:
 		# need to check all of our conditions after checking for a tie
