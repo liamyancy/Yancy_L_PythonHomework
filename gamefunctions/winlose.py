@@ -1,4 +1,5 @@
 from random import randint
+from gamefunctions import gamelives
 def winorlose(status):
 	# status will be either won or lost
 	print("called win or lose")
@@ -15,13 +16,13 @@ def winorlose(status):
 
 	elif (choice is "Y") or (choice is "y"):
 		#reset the game so we start over again
-		global player_lives
-		global computer_lives
-		global player
-		global computer
-		global choices
 
-		player_lives = 5
-		computer_lives =5
-		player = False
-		computer = choices[randint(0,2)]
+		gamelives.player_lives = 5
+		gamelives.computer_lives =5
+		gamelives.total_lives = 5
+		gamelives.player = False
+		gamelives.computer = gamelives.choices[randint(0,2)]
+
+	else:
+		# use recursion to call winorlose again
+		winorlose(status)
