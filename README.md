@@ -9,7 +9,7 @@ The rules are the same as the classic game:
   2. Scissors cuts Paper
   3. Rock smashes Scissors
 
-*italic*Choose your weapon wisely!
+*Choose your weapon wisely!*
 
 The cumputer chooses first; just follow the prompts.
 
