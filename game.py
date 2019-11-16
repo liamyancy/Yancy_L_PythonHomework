@@ -4,18 +4,49 @@ from gamefunctions import winlose, gamelives
 
 while gamelives.player is False:
 	#set player to True
-	print("******************************************************\n")
-	print("gamelives.Computer lives:", gamelives.computer_lives, "/", gamelives.total_lives, "\n")
+	print("______________________________________________________\n")
+	print("Computer lives:", gamelives.computer_lives, "/", gamelives.total_lives, "\n")
 	print("Player lives:", gamelives.player_lives, "/", gamelives.total_lives, "\n")
-	print("Choose your weapon!\n")
-	print("******************************************************\n")
+	print("Choose your weapon!\n") 
+	print("______________________________________________________\n")
 	
 	player = input("choose rock, paper or scissors: ")
 	player = player.lower()
 
-	print("computer chose", gamelives.computer, "\n")
+	print("\n"," the computer chose", gamelives.computer, "\n")
 	print("player chose", player, "\n")
+	
+	if player.lower() == "quit":
+		exit()
+	elif gamelives.computer == player:
+		print("tie! no one wins, play again")
 
+	elif player.lower() == "rock":
+		if gamelives.computer == "paper":
+			print("You lose!", gamelives.computer, "covers", player, "\n")
+			gamelives.player_lives = gamelives.player_lives - 1
+		else:
+			print("You win!", player, "smashes", gamelives.computer, "\n")
+			gamelives.computer_lives = gamelives.computer_lives - 1
+
+	elif player.lower() == "paper":
+		if gamelives.computer == "scissors":
+			print("You lose!", gamelives.computer, "cuts", player, "\n")
+			gamelives.player_lives = gamelives.player_lives - 1
+		else:
+			print("You win!", player, "covers", gamelives.computer, "\n")
+			gamelives.computer_lives = gamelives.computer_lives - 1
+
+	elif player.lower() == "scissors":
+		if gamelives.computer == "rock":
+			print("You lose!", gamelives.computer, "smahses", player, "\n")
+			gamelives.player_lives = gamelives.player_lives - 1
+		else:
+			print("You win!", player, "cuts", gamelives.computer, "\n")
+			gamelives.computer_lives = gamelives.computer_lives - 1
+
+	else:
+		print("thats not a valid choice, try again")
 
 
 

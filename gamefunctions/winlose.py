@@ -3,11 +3,11 @@ from gamefunctions import gamelives
 def winorlose(status):
 	# status will be either won or lost
 	print("called win or lose")
-	print("******************************************************")
+	print("______________________________________________________")
 
 	print("You", status, "! Would you like to play again?")
 
-	choice = input("Y / N ")
+	gamelives.choice = input("Y / N ")
 	print (choice)
 
 	if (choice is "N") or (choice is "n"):
@@ -24,5 +24,6 @@ def winorlose(status):
 		gamelives.computer = gamelives.choices[randint(0,2)]
 
 	else:
+		print("make a valid choice, Y or N")
 		# use recursion to call winorlose again
 		winorlose(status)
