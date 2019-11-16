@@ -2,13 +2,6 @@
 from random import randint
 from gamefunctions import winlose, gamelives
 
-
-
-#set up some variables for player and AI lives
-
-
-# define a python funtion that takes an arguement
-
 while gamelives.player is False:
 	#set player to True
 	print("******************************************************\n")
@@ -23,37 +16,6 @@ while gamelives.player is False:
 	print("computer chose", gamelives.computer, "\n")
 	print("player chose", player, "\n")
 
-	if player.lower() == "quit":
-		exit()
-	elif gamelives.computer == player:
-		print("tie! no one wins, play again")
-
-	elif player.lower() == "rock":
-		if gamelives.computer == "paper":
-			print("You lose!", gamelives.computer, "covers", player, "\n")
-			gamelives.player_lives = gamelives.player_lives - 1
-		else:
-			print("You win!", player, "smashes", gamelives.computer, "\n")
-			gamelives.computer_lives = gamelives.computer_lives - 1
-
-	elif player.lower() == "paper":
-		if gamelives.computer == "scissors":
-			print("You lose!", gamelives.computer, "cuts", player, "\n")
-			gamelives.player_lives = gamelives.player_lives - 1
-		else:
-			print("You win!", player, "covers", gamelives.computer, "\n")
-			gamelives.computer_lives = gamelives.computer_lives - 1
-
-	elif player.lower() == "scissors":
-		if gamelives.computer == "rock":
-			print("You lose!", gamelives.computer, "smahses", player, "\n")
-			gamelives.player_lives = gamelives.player_lives - 1
-		else:
-			print("You win!", player, "cuts", gamelives.computer, "\n")
-			gamelives.computer_lives = gamelives.computer_lives - 1
-
-	else:
-		print("thats not a valid choice, try again")
 
 
 
